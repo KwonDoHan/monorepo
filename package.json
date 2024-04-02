@@ -1,7 +1,18 @@
 {
   "name": "monorepo",
+  "private": true,
   "packageManager": "yarn@4.1.1",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "scripts": {
+    "vite": "yarn workspace vite-project",
+    "common": "yarn workspace @monorepo/common",
+    "vscode": "yarn dlx @yarnpkg/sdks vscode"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.3"
+  }
 }
